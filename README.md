@@ -21,5 +21,9 @@ $ conda activate fastapi
 (fastapi) $ pip install "uvicorn[standard]"
 ```
 
+<br>
+
+## 3. Usage
+
 
 
