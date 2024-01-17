@@ -23,18 +23,30 @@ $ conda activate fastapi
 
 <br>
 
-## 3. Usage
-
-
 
 ## 3. Usage
 
 **U1.** run the web server,
 ```shell
+(fastapi) $ cd folder1
 (fastapi) $ uvicorn main:app
 ```
 
-see the browser,
+access the browser,
 ```
 http://127.0.0.1:8000/
 ```
+
+**U2.** run the web server,
+```shell
+(fastapi) $ cd folder2
+(fastapi) $ uvicorn main:app
+```
+
+access the broswer,
+```
+http://127.0.0.1:8000/items/foo
+```
+
+
+
