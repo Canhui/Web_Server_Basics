@@ -25,9 +25,9 @@ $ conda activate fastapi
 
 ## 3. Usages
 
-**Usage 1.** run the web server,
+**Usage 1.a.** run the web server,
 ```shell
-(fastapi) $ cd folder1
+(fastapi) $ cd folder1_a
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 ```
 
@@ -40,9 +40,9 @@ Make sure that port 8000 is (port) mapped onto your (either local or cloud) rout
 
 <br>
 
-**Usage 2.** run the web server,
+**Usage 2.a.** run the web server,
 ```shell
-(fastapi) $ cd folder2
+(fastapi) $ cd folder2_a
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 (fastapi) $ uvicorn main2:app --host 0.0.0.0
 ```
@@ -57,9 +57,9 @@ Again, make sure that port 8000 is mapped onto your router.
 
 <br>
 
-**Usage 3.** run the web server,
+**Usage 2.b.** run the web server,
 ```shell
-(fastapi) $ cd folder3
+(fastapi) $ cd folder2_b
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 ```
 
@@ -71,9 +71,9 @@ http://127.0.0.1:8000/users/anotherme
 
 <br>
 
-**Usage 4.** run the web server,
+**Usage 2.c.** run the web server,
 ```shell
-(fastapi) $ cd folder4
+(fastapi) $ cd folder2_c
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 ```
 
@@ -85,9 +85,9 @@ http://127.0.0.1:8000/models/anothermodel
 
 <br>
 
-**Usage 5.** run the web server,
+**Usage 2.d.** run the web server,
 ```shell
-(fastapi) $ cd folder5
+(fastapi) $ cd folder2_d
 (fastapi) $ uvicorn main:app --host 0.0.0.0 
 ```
 
@@ -98,9 +98,9 @@ http://127.0.0.1:8000/files/fa
 
 <br>
 
-**Usage 6.** run the web server,
+**Usage 3.a.** run the web server,
 ```shell
-(fastapi) $ cd folder6
+(fastapi) $ cd folder3_a
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 ```
 
@@ -111,9 +111,9 @@ http://127.0.0.1:8000/items
 
 <br>
 
-**Usage 7.** run the web server,
+**Usage 3.b.** run the web server,
 ```shell
-(fastapi) $ cd folder7
+(fastapi) $ cd folder3_b
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 ```
 
