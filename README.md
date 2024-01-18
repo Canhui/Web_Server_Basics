@@ -122,6 +122,33 @@ access the browser,
 http://127.0.0.1:8000/items/foo-item?needy=sooooneedy
 ```
 
+<br>
+
+**Usage 4.a.** run the web server,
+```shell
+(fastapi) $ cd folder4_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser, 
+```
+http://127.0.0.1:8000/items/5?q=somequery
+```
+
+
+<br>
+
+**Usage 5.a.** run the web server,
+```shell
+(fastapi) $ cd folder5_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser, 
+```
+http://localhost:8000/items/?q=foo&q=bar
+```
+
 
 
 
