@@ -121,3 +121,25 @@ access the browser,
 ```
 http://127.0.0.1:8000/items/foo-item?needy=sooooneedy
 ```
+
+
+
+
+
+
+
+
+
+
+<br>
+
+## Acknowledgement
+
+This repo was done when working with ASTRI Security Lab, Hong Kong Applied Science and Technology Research Institute.
+
+<br>
+
+## Long-Term Support (LTS) Log
+
+[18 Jan 2024]: Repetable validation, succeed.
+
