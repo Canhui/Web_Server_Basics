@@ -144,7 +144,7 @@ http://127.0.0.1:8000/docs
 
 for example, in an ubuntu shell, run the following command,
 ```shell
-$ curl -X 'POST' \
+(fastapi) $ curl -X 'POST' \
   'http://127.0.0.1:8000/items/' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
@@ -157,69 +157,82 @@ $ curl -X 'POST' \
 ```
 
 
-
-
 <br>
 
-**Usage 5.a.** run the web server,
+**Usage 4.b.** run the web server,
 ```shell
-(fastapi) $ cd folder5_a
+(fastapi) $ cd folder4_post_b
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 ```
 
-access the browser, 
+access the browser to see the post method usage, 
 ```
-http://127.0.0.1:8000/items/?q=foo&q=bar
+http://127.0.0.1:8000/docs
+```
+
+for example, in an ubuntu shell, run the following command,
+```shell
+(fastapi) $ curl -X 'POST' \
+  'http://127.0.0.1:8000/items/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "joe",
+  "description": "hi world",
+  "price": 1,
+  "tax": 2
+}'
 ```
 
 <br>
 
-**Usage 5.b.** run the web server,
+
+ **Usage 4.c.** run the web server,
 ```shell
-(fastapi) $ cd folder5_b
+(fastapi) $ cd folder4_put_c
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 ```
 
-access the browser, 
+access the browser to see the post method usage, 
 ```
-http://127.0.0.1:8000/items/
+http://127.0.0.1:8000/docs
+```
+
+for example, in an ubuntu shell, run the following command,
+```shell
+(fastapi) $ curl -X 'PUT' \
+  'http://127.0.0.1:8000/items/1?q=2' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "joe",
+  "description": "hi",
+  "price": 3,
+  "tax": 4
+}'
 ```
 
 <br>
 
-**Usage 5.c.** run the web server,
+
+
+
+ **Usage 5.a.** run the web server,
+
 ```shell
-(fastapi) $ cd folder5_c
+(fastapi) $ cd folder5_get_a
 (fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
 ```
 
 access the browser,
 ```
-http://127.0.0.1:8000/items/?item-query=foobaritems
+http://127.0.0.1:8000/items/?q=1
 ```
-
-<br>
-
-**Usage 6.a.** run the web server,
-```shell
-(fastapi) $ cd folder6_a
-(fastapi) $ uvicorn main:app --host 0.0.0.0
-```
-
-access the browser,
-```
-http://127.0.0.1:8000/items/10
-```
-
-<br>
-
-**Usage 7.a.** run the web server,
-```shell
-(fastapi) $ cd folder7_a
-(fastapi) $ uvicorn main:app --host 0.0.0.0
-```
-
-
 
 
 
