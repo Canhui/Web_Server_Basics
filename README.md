@@ -42,7 +42,7 @@ Make sure that port 8000 is (port) mapped onto your (either local or cloud) rout
 
 **Usage 2.a.** run the web server,
 ```shell
-(fastapi) $ cd folder2_a
+(fastapi) $ cd folder2_get_a
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 (fastapi) $ uvicorn main2:app --host 0.0.0.0
 ```
@@ -57,9 +57,10 @@ Again, make sure that port 8000 is mapped onto your router.
 
 <br>
 
+
 **Usage 2.b.** run the web server,
 ```shell
-(fastapi) $ cd folder2_b
+(fastapi) $ cd folder2_get_b
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 ```
 
@@ -69,11 +70,12 @@ http://127.0.0.1:8000/users/me
 http://127.0.0.1:8000/users/anotherme
 ```
 
+
 <br>
 
 **Usage 2.c.** run the web server,
 ```shell
-(fastapi) $ cd folder2_c
+(fastapi) $ cd folder2_get_c
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 ```
 
@@ -83,11 +85,12 @@ http://127.0.0.1:8000/models/lenet
 http://127.0.0.1:8000/models/anothermodel
 ```
 
+
 <br>
 
 **Usage 2.d.** run the web server,
 ```shell
-(fastapi) $ cd folder2_d
+(fastapi) $ cd folder2_get_d
 (fastapi) $ uvicorn main:app --host 0.0.0.0 
 ```
 
@@ -96,11 +99,12 @@ access the broswer,
 http://127.0.0.1:8000/files/fa
 ```
 
+
 <br>
 
 **Usage 3.a.** run the web server,
 ```shell
-(fastapi) $ cd folder3_a
+(fastapi) $ cd folder3_get_a
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 ```
 
@@ -109,11 +113,12 @@ access the broswer and read all items in a python dict,
 http://127.0.0.1:8000/items
 ```
 
+
 <br>
 
 **Usage 3.b.** run the web server,
 ```shell
-(fastapi) $ cd folder3_b
+(fastapi) $ cd folder3_get_b
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 ```
 
@@ -121,6 +126,8 @@ access the browser,
 ```
 http://127.0.0.1:8000/items/foo-item?needy=sooooneedy
 ```
+
+
 
 <br>
 
@@ -134,6 +141,8 @@ access the browser,
 ```
 http://127.0.0.1:8000/items/5?q=somequery
 ```
+
+
 
 
 <br>
