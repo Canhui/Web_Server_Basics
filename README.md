@@ -212,12 +212,12 @@ for example, in an ubuntu shell, run the following command,
 }'
 ```
 
+
+
+
 <br>
 
-
-
-
- **Usage 5.a.** run the web server,
+**Usage 5.a.** run the web server,
 
 ```shell
 (fastapi) $ cd folder5_get_a
@@ -233,6 +233,473 @@ access the browser,
 ```
 http://127.0.0.1:8000/items/?q=1
 ```
+
+<br>
+
+**Usage 5.b.** run the web server,
+
+```shell
+(fastapi) $ cd folder5_get_b
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+access the browser,
+```
+http://127.0.0.1:8000/items/?item-query=1
+```
+
+<br>
+
+**Usage 6.a.** run the web server,
+
+```shell
+(fastapi) $ cd folder6_get_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+access the browser,
+
+```
+http://127.0.0.1:8000/items/1?item-query=2
+```
+
+<br>
+
+**Usage 6.b.** run the web server,
+
+```shell
+(fastapi) $ cd folder6_get_b
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+access the browser,
+```
+http://127.0.0.1:8000/items/1?q=2&size=3
+```
+
+
+<br>
+
+**Usage 7.a.** run the web server,
+
+```shell
+(fastapi) $ cd folder7_put_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+use the method in an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'PUT' \
+  'http://127.0.0.1:8000/items/1?q=2' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "joe",
+  "description": "hi world",
+  "price": 3,
+  "tax": 4
+}'
+```
+
+
+<br>
+
+**Usage 7.b.** run the web server,
+
+```shell
+(fastapi) $ cd folder7_put_b
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+use this method in an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'PUT' \
+  'http://127.0.0.1:8000/items/1' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "item": {
+    "name": "joe",
+    "description": "hi world",
+    "price": 1,
+    "tax": 2
+  },
+  "user": {
+    "username": "bob",
+    "full_name": "bobby"
+  }
+}'
+```
+
+
+<br>
+
+**Usage 7.c.** run the web server,
+
+```shell
+(fastapi) $ cd folder7_put_c
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+use this method in an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'PUT' \
+  'http://127.0.0.1:8000/items/1' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "item": {
+    "name": "joe",
+    "description": "hi world",
+    "price": 1,
+    "tax": 2
+  },
+  "user": {
+    "username": "bob",
+    "full_name": "bobby"
+  },
+  "importance": 5
+}'
+```
+
+
+<br>
+
+**Usage 8.a.** run the web server,
+
+```shell
+(fastapi) $ cd folder8_put_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+access the method via an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'PUT' \
+  'http://127.0.0.1:8000/items/1' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "item": {
+    "name": "joe",
+    "description": "hi world",
+    "price": 1,
+    "tax": 2
+  }
+}'
+```
+
+<br>
+
+**Usage 8.b.** run the web server,
+
+```shell
+(fastapi) $ cd folder8_put_b
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+access the method via an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'PUT' \
+  'http://127.0.0.1:8000/items/1' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "item": {
+    "name": "joe",
+    "description": "hi world",
+    "price": 1,
+    "tax": 2
+  }
+}'
+```
+
+<br>
+
+**Usage 9.a.** run the web server,
+
+```shell
+(fastapi) $ cd folder9_put_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+access the method via an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'PUT' \
+  'http://127.0.0.1:8000/items/1' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "joe",
+  "description": "hi world",
+  "price": 1,
+  "tax": 2,
+  "tags": [3, 4]
+}'
+```
+
+<br>
+
+**Usage 9.b.** run the web server,
+
+```shell
+(fastapi) $ cd folder9_put_b
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+access the method via an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'PUT' \
+  'http://127.0.0.1:8000/items/1' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "joe",
+  "description": "hi world",
+  "price": 2,
+  "tax": 3,
+  "tags": [],
+  "images": [
+    {
+      "url": "https://example.com/",
+      "name": "string"
+    }
+  ]
+}'
+```
+
+<br>
+
+**Usage 9.c.** run the web server,
+
+```shell
+(fastapi) $ cd folder9_post_c
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the method via an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'POST' \
+  'http://127.0.0.1:8000/offers/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "joe",
+  "description": "hi world",
+  "price": 1,
+  "items": [
+    {
+      "name": "bob",
+      "description": "hi bob",
+      "price": 2,
+      "tax": 3,
+      "tags": [],
+      "images": [
+        {
+          "url": "https://example.com/",
+          "name": "string"
+        }
+      ]
+    }
+  ]
+}'
+```
+
+
+<br>
+
+**Usage 10.a.** run the web server,
+
+```shell
+(fastapi) $ cd folder10_put_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the method via an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'PUT' \
+  'http://127.0.0.1:8000/items/1' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "description": "hi world",
+  "name": "joe",
+  "price": 2,
+  "tax": 3
+}'
+```
+
+<br>
+
+**Usage 10.b.** run the web server,
+
+```shell
+(fastapi) $ cd folder10_put_b
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the method via an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'PUT' \
+  'http://127.0.0.1:8000/items/1' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "joe",
+  "description": "hi world",
+  "price": 2,
+  "tax": 3
+}'
+```
+
+<br>
+
+**Usage 11.a.** run the web server,
+
+```shell
+(fastapi) $ cd folder11_put_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the method via an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'PUT' \
+  'http://127.0.0.1:8000/items/fe40682a-b603-4aa9-98ba-46dd5a8c72a3' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "start_datetime": "2024-01-22T09:21:04.586Z",
+  "end_datetime": "2024-01-22T09:21:04.586Z",
+  "repeat_at": "09:21:04.586Z",
+  "process_after": "P3D"
+}'
+```
+
+
+<br>
+
+**Usage 12.a.** run the web server,
+
+```shell
+(fastapi) $ cd folder12_get_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the method on an ubuntu shell,
+
+```shell
+(fastapi) $ curl -X 'GET' \
+  'http://127.0.0.1:8000/items/' \
+  -H 'accept: application/json' \
+  -H 'Cookie: ads_id=1'
+```
+
+
+<br>
+
+**Usage 13.a.** run the web server,
+
+```shell
+(fastapi) $ cd folder13_get_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the method on an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'GET' \
+  'http://127.0.0.1:8000/items/' \
+  -H 'accept: application/json' \
+  -H 'user-agent: 1'
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
