@@ -133,13 +133,27 @@ http://127.0.0.1:8000/items/foo-item?needy=sooooneedy
 
 **Usage 4.a.** run the web server,
 ```shell
-(fastapi) $ cd folder4_a
+(fastapi) $ cd folder4_post_a
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 ```
 
-access the browser, 
+access the browser to see the post method usage, 
 ```
-http://127.0.0.1:8000/items/5?q=somequery
+http://127.0.0.1:8000/docs
+```
+
+for example, in an ubuntu shell, run the following command,
+```shell
+$ curl -X 'POST' \
+  'http://127.0.0.1:8000/items/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "joe",
+  "description": "hi world",
+  "price": 0,
+  "tax": 0
+}'
 ```
 
 
