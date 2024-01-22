@@ -27,7 +27,7 @@ $ conda activate fastapi
 
 **Usage 1.a.** run the web server,
 ```shell
-(fastapi) $ cd folder1_a
+(fastapi) $ cd folder1_get_a
 (fastapi) $ uvicorn main:app --host 0.0.0.0
 ```
 
@@ -146,8 +146,60 @@ http://127.0.0.1:8000/items/5?q=somequery
 
 access the browser, 
 ```
-http://localhost:8000/items/?q=foo&q=bar
+http://127.0.0.1:8000/items/?q=foo&q=bar
 ```
+
+<br>
+
+**Usage 5.b.** run the web server,
+```shell
+(fastapi) $ cd folder5_b
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser, 
+```
+http://127.0.0.1:8000/items/
+```
+
+<br>
+
+**Usage 5.c.** run the web server,
+```shell
+(fastapi) $ cd folder5_c
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser,
+```
+http://127.0.0.1:8000/items/?item-query=foobaritems
+```
+
+<br>
+
+**Usage 6.a.** run the web server,
+```shell
+(fastapi) $ cd folder6_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser,
+```
+http://127.0.0.1:8000/items/10
+```
+
+<br>
+
+**Usage 7.a.** run the web server,
+```shell
+(fastapi) $ cd folder7_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+
+
+
+
 
 
 
