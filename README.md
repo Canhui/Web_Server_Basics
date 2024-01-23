@@ -691,13 +691,380 @@ run the method on an ubuntu shell,
   -H 'user-agent: 1'
 ```
 
+<br>
+
+**Usage 14.a.** run the web server,
+
+```shell
+(fastapi) $ cd folder14_get_post_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+use the GET command via the browser,
+```
+http://127.0.0.1:8000/items/
+```
+
+use the POST method via an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'POST' \
+  'http://127.0.0.1:8000/items/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "joe",
+  "description": "string",
+  "price": 0,
+  "tax": 0,
+  "tags": []
+}'
+```
+
+<br>
+
+**Usage 15.a.** run the web server,
+
+install the related dependencies in this example,
+```shell
+(fastapi) $ pip install pydantic
+(fastapi) $ pip install pydantic[email]
+```
+
+run the source code,
+```shell
+(fastapi) $ cd folder15_post_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the method on an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'POST' \
+  'http://127.0.0.1:8000/user/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "username": "joe",
+  "password": "this is a password",
+  "email": "user@example.com",
+  "full_name": "string"
+}'
+```
+
+
+<br>
+
+**Usage 15.b.** run the web server,
+
+```shell
+(fastapi) $ cd folder15_get_b
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the method on the browser,
+```
+http://127.0.0.1:8000/items/
+```
+
+
+<br>
+
+**Usage 16.a.** run the web server,
+
+```shell
+(fastapi) $ cd folder16_post_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the method on an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'POST' \
+  'http://127.0.0.1:8000/items/?name=joe' \
+  -H 'accept: application/json' \
+  -d ''
+```
+
+
+<br>
+
+**Usage 17.a.** run the web server,
+
+install the dependency
+```shell
+(fastapi) $ pip install python-multipart
+```
+
+run the web server
+```shell
+(fastapi) $ cd folder17_post_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the method on an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'POST' \
+  'http://127.0.0.1:8000/login/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'username=joe&password=this%20is%20the%20password%20for%20joe'
+```
+
+<br>
+
+**Usage 18.a.** run the web server,
+
+run the web server
+```shell
+(fastapi) $ cd folder18_post_get_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the post method under the "/files/" directory,
+```shell
+(fastapi) $ curl -X 'POST' \
+  'http://127.0.0.1:8000/files/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'files=@Fairy-CR.pdf;type=application/pdf'
+```
+
+run the post method under the "/uploadfiles/" directory,
+```shell
+(fastapi) $ curl -X 'POST' \
+  'http://127.0.0.1:8000/uploadfiles/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'files=@Fairy-CR.pdf;type=application/pdf'
+```
+
+run the get method via the browser,
+```shell
+http://127.0.0.1:8000/
+```
+
+
+<br>
+
+**Usage 19.a.** run the web server,
+
+run the web server
+```shell
+(fastapi) $ cd folder19_post_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the post method via an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'POST' \
+  'http://127.0.0.1:8000/files/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'file=@Fairy-CR.pdf;type=application/pdf' \
+  -F 'fileb=@Fairy-CR.pdf;type=application/pdf' \
+  -F 'token=wer'
+```
+
+<br>
+
+**Usage 20.a.** run the web server,
+
+run the web server
+```shell
+(fastapi) $ cd folder20_get_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the method on a browser,
+```
+http://127.0.0.1:8000/items/1
+```
+
+
+<br>
+
+**Usage 21.a.** run the web server,
+
+run the web server
+```shell
+(fastapi) $ cd folder21_post_get_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+run the method via a broswer,
+```
+http://127.0.0.1:8000/items/
+```
+
+run the method via an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'POST' \
+  'http://127.0.0.1:8000/items/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "joe",
+  "description": "hi world",
+  "price": 1,
+  "tax": 2,
+  "tags": []
+}'
+```
+
+run the method via the browser,
+```shell
+http://127.0.0.1:8000/users/
+```
+
+
+<br>
+
+**Usage 21.b.** run the web server,
+
+run the web server
+```shell
+(fastapi) $ cd folder21_get_get_b
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+use the method via the browser,
+```
+http://127.0.0.1:8000/items/
+```
+
+use the second method via te browser,
+```
+http://127.0.0.1:8000/users/
+```
+
+<br>
+
+**Usage 22.a.** run the web server,
+
+run the web server
+```shell
+(fastapi) $ cd folder22_put_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+access the method via an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'PUT' \
+  'http://127.0.0.1:8000/items/joe' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "title": "joe",
+  "timestamp": "2024-01-23T02:53:30.042Z",
+  "description": "string"
+}'
+```
+
+
+<br>
+
+**Usage 23.a.** run the web server,
+
+run the web server
+```shell
+(fastapi) $ cd folder23_get_put_a
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
+
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
+
+use the method via the browser,
+```
+http://127.0.0.1:8000/items/1
+```
 
 
 
+<br>
 
+**Usage 23.b.** run the web server,
 
+run the web server
+```shell
+(fastapi) $ cd folder23_get_patch_b
+(fastapi) $ uvicorn main:app --host 0.0.0.0
+```
 
+access the browser to see the post method usage, 
+```
+http://127.0.0.1:8000/docs
+```
 
+access an ubuntu shell,
+```shell
+(fastapi) $ curl -X 'PATCH' \
+  'http://127.0.0.1:8000/items/1' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "string",
+  "description": "string",
+  "price": 0,
+  "tax": 10.5,
+  "tags": []
+}'
+```
 
 
 
