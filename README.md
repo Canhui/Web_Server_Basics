@@ -1066,26 +1066,6 @@ access an ubuntu shell,
 }'
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-
-## Acknowledgement
-
-This repo was done when working with ASTRI Security Lab, Hong Kong Applied Science and Technology Research Institute.
-
 <br>
 
 ## Long-Term Support (LTS) Log
